@@ -37,7 +37,7 @@ class StoryMigration extends Migration {
           'description' => 'ID of source row',
         )
       ),
-      MigrateDestinationNode::getKeySchema();
+      MigrateDestinationNode::getKeySchema()
     );
   }
 }
