@@ -28,20 +28,16 @@ class StoryMigration extends Migration {
     /*
      *  Add the SQL Mapping to store the key <-> key identifiers
      */
-    $story_definition = array(
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'description' => 'ID of source row',
-      );
-    $source_key = array('id' => $story_definition);
-
-    $destination_key = MigrateDestinationNode::getKeySchema();
-
     $this->map = new MigrateSQLMap(
       $this->machineName,
-      $source_key,
-      $desintation_key
+      array('storyid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'description' => 'ID of source row',
+        )
+      ),
+      MigrateDestinationNode::getKeySchema();
     );
   }
 }
