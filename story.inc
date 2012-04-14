@@ -25,6 +25,13 @@ class StoryMigration extends Migration {
     $this->addFieldMapping('created', 'date_created');
     $this->addFieldMapping('status', '')->defaultValue(1);
 
-    $this->map = new MigrateSQLMap();
+    /*
+     *  Add the SQL Mapping to store the key <-> key identifiers
+     */
+    $this->map = new MigrateSQLMap(
+      $this->machineName,
+      $source_key,
+      $desintation_key
+    );
   }
 }
