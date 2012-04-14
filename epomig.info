@@ -1,0 +1,6 @@
+name = epomig
+description = A custom set of migration scripts
+package = Custom migrations
+core = 7.x
+
+dependencies[] = migrate
