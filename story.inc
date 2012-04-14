@@ -35,6 +35,8 @@ class StoryMigration extends Migration {
         'description' => 'ID of source row',
       );
     $source_key = array('storyid' => $story_definition);
+
+    $destination_key = MigrateDestinationNode::getKeySchema();
     
     $this->map = new MigrateSQLMap(
       $this->machineName,
