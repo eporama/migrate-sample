@@ -1,0 +1,15 @@
+<?php
+
+/* 
+ * This will be a custom set of migration classes for a migration demo.
+ */
+
+/*
+ * Implementation of hook_migrate_api.
+ */
+function epomigrate_migrate_api() {
+  $api = array(
+    'api' => 2,
+  );
+  return $api;
+}
