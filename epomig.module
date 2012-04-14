@@ -13,3 +13,17 @@ function epomigrate_migrate_api() {
   );
   return $api;
 }
+
+/*
+ * Implementation of hook_init
+ */
+function epomig_init() {
+  Database::addConnectionInfo('for_migration', 'default', array(
+    'driver' => 'mysql',
+    'database' => 'migrations',
+    'username' => 'root',
+    'password' => '',
+    'host' => 'localhost',
+    'prefix' => '',
+  ));
+}
