@@ -14,7 +14,14 @@ class StoryMigration extends Migration {
  
     $this->source = new MigrateSourceSQL($query);
 
-    $this->destination = new MigrateDestinationNode();
+    $this->destination = new MigrateDestinationNode('article');
+
+    /*
+     * Add field mappings as Drupal object property and source field name
+     */
+    $this->addFieldMapping('title', 'title');
+    $this->addFieldMapping('body', 'body');
+    
     $this->map = new MigrateSQLMap();
   }
 }
