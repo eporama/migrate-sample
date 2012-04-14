@@ -4,3 +4,5 @@ package = Custom migrations
 core = 7.x
 
 dependencies[] = migrate
+
+files[] = story.inc
