@@ -6,3 +6,4 @@ core = 7.x
 dependencies[] = migrate
 
 files[] = story.inc
+files[] = users.inc
