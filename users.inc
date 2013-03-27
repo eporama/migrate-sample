@@ -12,7 +12,7 @@ class UserMigration extends Migration {
              ->select('authors', 'old_users');
     $query->fields('old_users'); // this grabs all fields from "old_users"
 
-    $this->source = new MigrateSourceSQL($query, array(), NULL, array('map_joinable' => FALSE));
+    $this->source = new MigrateSourceSQL($query);
 
     $this->destination = new MigrateDestinationUser();
 
