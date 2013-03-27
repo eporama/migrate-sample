@@ -6,4 +6,8 @@ core = 7.x
 dependencies[] = migrate
 
 files[] = story.inc
+<<<<<<< HEAD
 files[] = users.inc
+=======
+files[] = users.inc
+>>>>>>> step_15_connect_users
