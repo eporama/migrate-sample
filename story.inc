@@ -11,7 +11,7 @@ class StoryMigration extends Migration {
     $query = Database::getConnection('default', 'for_migration')
              ->select('stories', 'old_stories');
     $query->fields('old_stories'); // this grabs all fields from "old_stories"
- 
+
     $this->source = new MigrateSourceSQL($query);
 
     $this->destination = new MigrateDestinationNode('article');
@@ -34,8 +34,8 @@ class StoryMigration extends Migration {
         'not null' => TRUE,
         'description' => 'ID of source row',
       );
-    $source_key = array('storyid' => $story_definition);
-    
+    $source_key = array('id' => $story_definition);
+
     $this->map = new MigrateSQLMap(
       $this->machineName,
       $source_key,
