@@ -21,7 +21,7 @@ class StoryMigration extends Migration {
      */
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('body', 'body');
-    $this->addFieldMapping('uid', 'author_id');
+    $this->addFieldMapping('uid', '')->defaultValue(1);
     $this->addFieldMapping('created', 'date_created');
     $this->addFieldMapping('status', '')->defaultValue(1);
 
