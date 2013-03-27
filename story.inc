@@ -32,7 +32,7 @@ class StoryMigration extends Migration {
      */
     $this->map = new MigrateSQLMap(
       $this->machineName,
-      array('storyid' => array(
+      array('id' => array(
           'type' => 'int',
           'unsigned' => TRUE,
           'not null' => TRUE,
