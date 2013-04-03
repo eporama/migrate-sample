@@ -5,16 +5,6 @@
  */
 
 /*
- * Implementation of hook_migrate_api.
- */
-function epomig_migrate_api() {
-  $api = array(
-    'api' => 2,
-  );
-  return $api;
-}
-
-/*
  * Implementation of hook_init
  */
 function epomig_init() {
